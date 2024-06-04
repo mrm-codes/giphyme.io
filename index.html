@@ -7,18 +7,16 @@
     <!--Important links-->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet02" href="./css/style.scss">
-    <script src="./js/main.js"></script>
+    <script src="./js/main.js" defer></script>
 </head>
 <body>
     <div class="search-bar">
         <input type="search" name="search" id="search" placeholder="Search here!">
-        <input type="submit" name="search" value="Search">
+        <button id="btn-search" onclick="sendRequest()">Search</button>
     </div>
-
-    <div class="search-results"> <!--Search result container-->
-        <div class="results" id="results"> <!---Result box-->
-
-        </div>
+    <!--Search result container-->
+    <div class="search-results" id="jsSrcResults">
+        <div class="img-holder"></div>
     </div>
 </body>
 </html>

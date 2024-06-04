@@ -27,7 +27,7 @@ input[type="search" i]{
     border: .05rem solid #000000; 
     border-radius: 1rem;
 }
-input[type="submit" i]{
+#btn-search{
     width: 18%;
     margin: .5rem;
     border-radius: 1rem;
@@ -37,19 +37,14 @@ input[type="submit" i]{
 }
 .search-results{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: .25rem;
     margin-top: .85rem;
     justify-content: center;
-    
+
 
 }
 
-#results{
-    border: 1px solid red;
-    background-color: #eee;
-    padding: .5rem;
-}
 
 .hide{
     display: none;
