@@ -8,30 +8,37 @@ Fetch three types of data:
 */
 
 //search button
+
 async function sendRequest(){
-    
     var api_key = "api_key=b1zeTzlumEtPbUNcVYzQjeUi93hPyk1i";
-    var userInput = document.getElementById("search").value
-    
+    var userInput = document.getElementById("search").value;
+    const resultBox = document.querySelector(".keyWordList");
+    //const inputBox =document.getElementById("search")
 
    await fetch(`https://api.giphy.com/v1/gifs/search?${api_key}&q=${userInput}&limit=25&offset=0&rating=g&lang=en&bundle=clips_grid_picker`)
    .then(function(data){
     return data.json()
    })
    .then(function(json){
-    //for each starts here
    
-    
-   for (let i = 0; i < 25; i++){
+   for (let i = 0; i<30; i++){
     //urlPaths = console.log(json.data[i].images.fixed_width.url) 
+    //var keyWordList = [json.data.title]
+    //console.log(json.data[i])
     var imgPath = json.data[i].images.fixed_width.url
     var img = document.createElement("img")
     img.setAttribute("src", imgPath)
     document.getElementById("jsSrcResults").appendChild(img)
+    //console.log(keyWordList)
+    
     }
 
    })
+
+    
 }
+
+
 
 
 
