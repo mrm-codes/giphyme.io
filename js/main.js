@@ -6,6 +6,14 @@ Fetch three types of data:
 - When clicked search it gives you multiple results
 -when clicked on one of the result, it opens a new page displaying the image on the center and the title and buttons in the bottom
 */
+//Responsive menu settings
+function menuBtn(){
+    var menu = document.getElementById("nav-list"); //element to be added the class
+    var navSection = document.getElementById("nav"); //navabar section
+    menu.classList.toggle("flex-menu"); //the class to add
+    navSection.classList.toggle("nav-section"); //the class to add
+    
+}
 
 //search button
 

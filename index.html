@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index</title>
     <!--Important links-->
+   
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet02" href="./css/style.scss">
     <script src="./js/main.js" defer></script>
 </head>
 <body>
     <!--Navegation menu-->
-    <div class="nav">
+    <div class="nav" id="nav">
+
         <div class="logo" id="logo">Giphy<span class="me-word">Me</span></div>
-        <div class="nav-group">
-            <ul class="navbar">
+        <button type="button" id="btn-menu" onclick="menuBtn()">Menu</button>
+        
+
+        <div class="nav-group">    
+            <ul class="navbar" id="nav-list">
                 <div class="nav-item">Home</div>
                 <div class="nav-item">About</div>
                 <div class="nav-item">Login</div>
