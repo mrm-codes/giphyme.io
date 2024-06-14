@@ -15,31 +15,28 @@
     <div class="nav" id="nav">
 
         <div class="logo" id="logo">Giphy<span class="me-word">Me</span></div>
-        <button type="button" id="btn-menu" onclick="menuBtn()">Menu</button>
-        
-
-        <div class="nav-group">    
+       
+      
+        <div id="nav-group">    
             <ul class="navbar" id="nav-list">
                 <div class="nav-item">Home</div>
                 <div class="nav-item">About</div>
                 <div class="nav-item">Login</div>
+                <button type="button" id="btn-menu" onclick="menuBtn()">Menu</button>
             </ul>
-        </div>
+        </div> 
+         
+       
+       </div>
     </div>
 
     <div class="search-section">
         <div class="search-bar">
             <input type="search" name="search" id="search" placeholder="Search here!" >
-            <button id="btn-search" onclick="sendRequest()">Search</button>
+            <button id="btn-search" onclick="sendRequest()">Search</button> 
         </div>  
-        
-        <!--
-        <div class="keyWordList" id="keyWordList">
-            
-        </div>
-        -->
     </div>
-    <!--Search result container-->
+   
     <div class="search-results" id="jsSrcResults"></div>
 </body>
 </html>
