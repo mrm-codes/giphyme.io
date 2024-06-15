@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index</title>
     <!--Important links-->
-   
+    
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet02" href="./css/style.scss">
     <script src="./js/main.js" defer></script>
@@ -14,14 +14,14 @@
     <!--Navegation menu-->
     <div class="nav" id="nav">
 
-        <div class="logo" id="logo">Giphy<span class="me-word">Me</span></div>
+        <div class="logo" id="logo"><a href="index.html">Giphy<span class="me-word">Me</span></a></div>
        
       
         <div id="nav-group">    
             <ul class="navbar" id="nav-list">
-                <div class="nav-item">Home</div>
-                <div class="nav-item">About</div>
-                <div class="nav-item">Login</div>
+                <a class="nav-item" href="index.html">Home</a>
+                <a class="nav-item" href="#">About</a>
+                <button id="btn-log" onclick="logBtn()">Login</button>
                 <button type="button" id="btn-menu" onclick="menuBtn()">Menu</button>
             </ul>
         </div> 
@@ -29,7 +29,7 @@
        
        </div>
     </div>
-
+<!---Search section-->
     <div class="search-section">
         <div class="search-bar">
             <input type="search" name="search" id="search" placeholder="Search here!" >
@@ -38,5 +38,19 @@
     </div>
    
     <div class="search-results" id="jsSrcResults"></div>
+
+    <!---Login-->
+    <div id="form" class="hidden-form">
+        <h2>Login</h2>
+        <button id="btn-close" onclick="closeBtn()">&times;</button>
+        
+        <label>Email</label>
+        <input type="email" name="email" placeholder="johndoe@giphy.io">
+        <label>Password</label>
+        <input type="password">
+        
+        <input type="submit" value="Log in">
+        <p class="link">Forgot Password? <span class="click-here">Click here!</span></p>
+    </div>
 </body>
 </html>

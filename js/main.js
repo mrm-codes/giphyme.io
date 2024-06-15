@@ -5,7 +5,20 @@ Fetch three types of data:
 -WHEN TYPING, it sguggest matching words,
 - When clicked search it gives you multiple results
 -when clicked on one of the result, it opens a new page displaying the image on the center and the title and buttons in the bottom
+
+  
+
 */
+//Login button
+function logBtn(){
+  const logForm = document.getElementById("form");
+  logForm.classList.toggle("visible")
+}
+
+// close button
+function closeBtn(){
+document.getElementById("form").classList.remove("visible");
+}
 //Responsive menu settings
 function menuBtn(){
     //responsive condition
