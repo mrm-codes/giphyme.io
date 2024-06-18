@@ -2,23 +2,79 @@
 //TODO
 /* 
 Fetch three types of data:
--WHEN TYPING, it sguggest matching words,
-- When clicked search it gives you multiple results
+-
+- 
 -when clicked on one of the result, it opens a new page displaying the image on the center and the title and buttons in the bottom
-
-  
+- nav is inline style, correct to flex-column
+//work with 320px screen
+//close button not working
+//FORM NOT WORKING 
 
 */
+
+function closeBtn(){
+    const signForm = document.getElementById("sign-form");
+    const logForm = document.getElementById("log-form");
+    
+    signForm.classList.remove("visible-form");
+    logForm.classList.remove("visible-form");
+    
+} 
+
+
 //Login button
 function logBtn(){
-  const logForm = document.getElementById("form");
-  logForm.classList.toggle("visible")
+  const signForm = document.getElementById("sign-form");
+  const logForm = document.getElementById("log-form");
+  const signHeader = document.getElementById("h2-sign");
+  const logHeader = document.getElementById("h2-log");
+
+    //activeness
+    signForm.classList.toggle("visible-form");
+    if (signForm.classList.contains ("visible-form")){
+        //signHeader.classList.add("active-form");
+    }
+   
+   
+}
+
+//switchness
+function switchToLog(){
+    const signForm = document.getElementById("sign-form");
+    const logForm = document.getElementById("log-form");
+    const signHeader = document.getElementById("h2-sign");
+    const logHeader = document.getElementById("h2-log");
+
+    signHeader.classList.remove("active-form");
+    logHeader.classList.add("active-form");
+    
+    //form switcher
+    if (signForm.classList.contains("visible-form")){
+        signForm.classList.remove("visible-form");
+        logForm.classList.add("visible-form");
+        
+    }     
+
+}
+
+function switchToSign(){
+    const signForm = document.getElementById("sign-form");
+    const logForm = document.getElementById("log-form");
+    const signHeader = document.getElementById("h2-sign");
+    const logHeader = document.getElementById("h2-log");
+
+    logHeader.classList.remove("active-form");
+    signHeader.classList.add("active-form");
+
+    if (logForm.classList.contains("visible-form")){
+        logForm.classList.remove("visible-form");
+        signForm.classList.add("visible-form");
+}
 }
 
 // close button
-function closeBtn(){
-document.getElementById("form").classList.remove("visible");
-}
+
+
 //Responsive menu settings
 function menuBtn(){
     //responsive condition

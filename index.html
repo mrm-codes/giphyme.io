@@ -21,7 +21,7 @@
             <ul class="navbar" id="nav-list">
                 <a class="nav-item" href="index.html">Home</a>
                 <a class="nav-item" href="#">About</a>
-                <button id="btn-log" onclick="logBtn()">Login</button>
+                <button id="btn-log" onclick="logBtn()">Log in/Sign Up</button>
                 <button type="button" id="btn-menu" onclick="menuBtn()">Menu</button>
             </ul>
         </div> 
@@ -39,11 +39,39 @@
    
     <div class="search-results" id="jsSrcResults"></div>
 
-    <!---Login-->
-    <div id="form" class="hidden-form">
-        <h2>Login</h2>
-        <button id="btn-close" onclick="closeBtn()">&times;</button>
+    
+
+    <!---sign up-->
+    <div id="sign-form" class="hidden-form" > 
+        <!--switch buttons-->
+        <div class="resp-form"> 
+        <button id="h2-log" onclick="switchToLog()"> Log in</button>
+        <button id="h2-sign" onclick="switchToSign()">Sign up</button> 
+       
+        <button id="sign-btn-close" onclick="closeBtn()">&times;</button>
+        </div>
+
+
+        <label>Email</label>
+        <input type="email" name="email" placeholder="johndoe@giphy.io">
+        <label>Password</label>           
+        <input type="password">
+
+        <label>Confirm Password</label>
+        <input type="password">
         
+        <input type="submit" value="Sign Up">
+        <p class="link">Already have an account? <span class="click-here">Log in here!</span></p>
+    </div>
+
+    <!---Login-->
+    <div id="log-form" class="hidden-form">
+        <div class="resp-form"> 
+            <button id="h2-log" onclick="switchToLog()"> Log in</button>
+            <button id="h2-sign" onclick="switchToSign()">Sign up</button> 
+           
+            <button id="sign-btn-close" onclick="closeBtn()">&times;</button>
+            </div>
         <label>Email</label>
         <input type="email" name="email" placeholder="johndoe@giphy.io">
         <label>Password</label>
@@ -52,5 +80,23 @@
         <input type="submit" value="Log in">
         <p class="link">Forgot Password? <span class="click-here">Click here!</span></p>
     </div>
+<!--
+    <div class="about" id="about">
+        <h1>About this website</h1>
+        <h2>Mission</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia illo dolore quisquam nisi nesciunt asperiores ratione doloremque sequi necessitatibus molestias. Lorem ipsum dolor sit amet consectetur adipisicing elit. Id vel tempore molestias voluptas molestiae obcaecati!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia illo dolore quisquam nisi nesciunt asperiores ratione doloremque sequi necessitatibus molestias.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia illo dolore quisquam nisi nesciunt asperiores ratione doloremque sequi necessitatibus molestias.</p>
+        <h2>Vision</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia illo dolore quisquam nisi nesciunt asperiores ratione doloremque sequi necessitatibus molestias.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia illo dolore quisquam nisi nesciunt asperiores ratione doloremque sequi necessitatibus molestias.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia illo dolore quisquam nisi nesciunt asperiores ratione doloremque sequi necessitatibus molestias.</p>
+        <h2>Our Giphy</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia illo dolore quisquam nisi nesciunt asperiores ratione doloremque sequi necessitatibus molestias.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia illo dolore quisquam nisi nesciunt asperiores ratione doloremque sequi necessitatibus molestias.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia illo dolore quisquam nisi nesciunt asperiores ratione doloremque sequi necessitatibus molestias.</p>
+    
+    </div>
+    -->
 </body>
 </html>
