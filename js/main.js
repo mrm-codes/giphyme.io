@@ -130,6 +130,17 @@ async function sendRequest(){
 
 
 
+//about section
+
+function showHide(){
+    clearResults();
+    const about = document.getElementById("about");
+    about.classList.toggle("show");
+
+    function clearResults (){
+    document.getElementById("jsSrcResults").innerHTML = '';
+   } 
+}
 
 
 

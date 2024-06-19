@@ -283,6 +283,32 @@ input::placeholder{
     font-size: 1rem;
 }
 
+/*ABOUT*/
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+h1{
+    background-color: #222;
+    margin: auto;
+    padding: 0 1rem;
+}
+#about h2{
+    text-align: left;
+    padding: 1rem .85rem 0;
+    color: #eee;
+}
+#about p{
+    padding: .25rem .85rem;
+    text-align: justify;
+    color: #eee;
+    
+}
+
 /*END OF WIDESCREEN CONFIG*/
 
 
