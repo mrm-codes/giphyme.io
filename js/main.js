@@ -121,6 +121,25 @@ async function sendRequest(){
    } 
 };
 
+//trending results
+async function trend(){ await fetch ("https://api.giphy.com/v1/gifs/trending?api_key=b1zeTzlumEtPbUNcVYzQjeUi93hPyk1i&limit=45&offset=0&rating=g&bundle=messaging_non_clips").then(function(data){
+    return data.json()
+})
+.then(function(json){
+
+//getting more than a single result
+for (let i = 0; i<30; i++){
+    var imgPath = json.data[i].images.fixed_width.url
+    var img = document.createElement("img")
+
+    //creating images attributes
+    img.setAttribute("src", imgPath);
+    img.setAttribute("onclick", "openMe(this)");
+    document.getElementById("trend-results").appendChild(img);}}
+);
+}
+trend();
+
 //ABOUT SECTION
 function showHide(){
     clearResults(); // clear search results
@@ -129,6 +148,7 @@ function showHide(){
 
     function clearResults (){
     document.getElementById("jsSrcResults").innerHTML = '';
+    document.getElementById("trending").innerHTML = '';
    } 
 }
 
