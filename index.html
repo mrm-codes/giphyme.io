@@ -18,12 +18,14 @@
         <div class="logo" id="logo"><a href="index.html">Giphy <span class="me-word">Me</span></a></div>
        
       
-        <div id="nav-group">    
-            <ul class="navbar" id="nav-list">
+        <div id="nav-group">  
+            <button type="button" id="btn-menu" onclick="menuBtn()">Menu</button>
+            <ul class="navbar" id="nav-list"> 
+                
                 <a class="nav-item" href="./index.html">Home</a>
                 <button class="nav-item" onclick="showHide()">About</button>
                 <button id="btn-log" onclick="logBtn()">Log in/Sign Up</button>
-                <button type="button" id="btn-menu" onclick="menuBtn()">Menu</button>
+                
             </ul>
         </div> 
          
@@ -37,10 +39,19 @@
             <button id="btn-search" onclick="sendRequest()">Search</button> 
         </div>  
     </div>
-   
-    <div class="search-results" id="jsSrcResults"></div>
-
     
+    <div class="search-results" id="jsSrcResults"></div>
+    <!--Single image display-->
+   <div id="img-container" class="img-container">
+        
+        <div class="single-img">
+            <img id="clicked-img" src="" alt="Enlarged">
+        </div>
+        <span class="close" onclick="closeImg()">&times;</span>
+    </div>
+    <!-- 
+    Gif showcase
+    -->
 
     <!---sign up-->
     <div id="sign-form" class="hidden-form" > 
@@ -56,10 +67,10 @@
         <label>Email</label>
         <input type="email" name="email" placeholder="johndoe@giphy.io">
         <label>Password</label>           
-        <input type="password">
+        <input type="password" name="password">
 
         <label>Confirm Password</label>
-        <input type="password">
+        <input type="password" name="password">
         
         <input type="submit" value="Sign Up">
         <p class="link">Already have an account? <span class="click-here">Log in here!</span></p>
@@ -108,12 +119,7 @@
         <p><strong>Our Headquarters:</strong> Suite. 907 99356 Ledner Light, New Jacquelyn, TX 85645-4311</p>
         <p><strong>Contact us: </strong>414 - 999 - 9999</p>
         <p>GiphyMe &copy; All the rights reserved 2024</p>
-        <!--
-        p
-        location,
-        contact,
-        all right are reserved
-        -->
+       
     </div>
 </body>
 </html>

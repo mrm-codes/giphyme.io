@@ -1,26 +1,26 @@
-//fecthing data b1zeTzlumEtPbUNcVYzQjeUi93hPyk1i
-//TODO
-/* 
-Fetch three types of data:
--
-- 
--when clicked on one of the result, it opens a new page displaying the image on the center and the title and buttons in the bottom
-- nav is inline style, correct to flex-column
-//work with 320px screen
-//close button not working
-//FORM NOT WORKING 
 
-*/
+//openMe image
+function openMe(img){
+    var imgContainer = document.getElementById("img-container");
+    var imgClicked = document.getElementById("clicked-img");
+    imgContainer.style.display = "block";
+    imgClicked.src = img.src;
+}
 
+//close image
+function closeImg(){
+    document.getElementById("img-container").style.display = "none";
+}
+
+//FORMS 
+//Close button
 function closeBtn(){
     const signForm = document.getElementById("sign-form");
     const logForm = document.getElementById("log-form");
     
     signForm.classList.remove("visible-form");
-    logForm.classList.remove("visible-form");
-    
+    logForm.classList.remove("visible-form"); 
 } 
-
 
 //Login button
 function logBtn(){
@@ -33,12 +33,10 @@ function logBtn(){
     signForm.classList.toggle("visible-form");
     if (signForm.classList.contains ("visible-form")){
         //signHeader.classList.add("active-form");
-    }
-   
-   
+    }   
 }
 
-//switchness
+//switch forms button
 function switchToLog(){
     const signForm = document.getElementById("sign-form");
     const logForm = document.getElementById("log-form");
@@ -51,10 +49,8 @@ function switchToLog(){
     //form switcher
     if (signForm.classList.contains("visible-form")){
         signForm.classList.remove("visible-form");
-        logForm.classList.add("visible-form");
-        
-    }     
-
+        logForm.classList.add("visible-form");        
+    } 
 }
 
 function switchToSign(){
@@ -72,39 +68,36 @@ function switchToSign(){
 }
 }
 
-// close button
 
-
-//Responsive menu settings
+//navigation menu settings for 320px screen-size
 function menuBtn(){
     //responsive condition
-    var navSection = document.getElementById("nav"); //navabar 
-    var navGroup = document.getElementById("nav-group");
+    var navSection = document.getElementById("nav"); //nav
+    var navGroup = document.getElementById("nav-group"); 
     var btnActive = document.getElementById("btn-menu");
     var responsiveClass = document.getElementById("nav-list");
 
     if(responsiveClass.className === "navbar"){
-        responsiveClass.className += "responsive-menu";
+        responsiveClass.className += " flex-menu";
     } else {
         responsiveClass.className = "navbar";
     }
 
     navSection.classList.toggle("nav-section"); //the class to add
     navGroup.classList.toggle("active");
-    btnActive.classList.toggle("btn-active")
-    
+    btnActive.classList.toggle("btn-active")  
 }
 
-//search section
+//SEARCH SECTION
 async function sendRequest(){
     //clear the previous result
     clearResults();
 
     //delcarations
-    var api_key = "api_key=b1zeTzlumEtPbUNcVYzQjeUi93hPyk1i";
-    var userInput = document.getElementById("search").value;
+    var _api_key = "api_key=b1zeTzlumEtPbUNcVYzQjeUi93hPyk1i";
+    var _userInput = document.getElementById("search").value;
 
-    await fetch(`https://api.giphy.com/v1/gifs/search?${api_key}&q=${userInput}&limit=25&offset=0&rating=g&lang=en&bundle=clips_grid_picker`)
+    await fetch(`https://api.giphy.com/v1/gifs/search?${_api_key}&q=${_userInput}&limit=25&offset=0&rating=g&lang=en&bundle=clips_grid_picker`)
     .then(function(data){
         return data.json()
     })
@@ -116,11 +109,11 @@ async function sendRequest(){
         var img = document.createElement("img")
 
         //creating images attributes
-        img.setAttribute("src", imgPath)
-        document.getElementById("jsSrcResults").appendChild(img)
-    
+        img.setAttribute("src", imgPath);
+        img.setAttribute("onclick", "openMe(this)");
+        document.getElementById("jsSrcResults").appendChild(img); 
     }
-   })  
+   }) 
 
    //clear result
    function clearResults (){
@@ -128,14 +121,11 @@ async function sendRequest(){
    } 
 };
 
-
-
-//about section
-
+//ABOUT SECTION
 function showHide(){
-    clearResults();
+    clearResults(); // clear search results
     const about = document.getElementById("about");
-    about.classList.toggle("show");
+    about.classList.toggle("show"); //show content
 
     function clearResults (){
     document.getElementById("jsSrcResults").innerHTML = '';
