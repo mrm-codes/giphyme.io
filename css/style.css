@@ -1,6 +1,14 @@
 /*FONTS*/
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Caveat:wght@400..700&family=Nanum+Gothic&family=Roboto+Slab:wght@100..900&family=Tangerine:wght@400;700&family=Tenor+Sans&display=swap');
 
+@keyframes word-color {
+    from
+    0%   {color:#ff0000;}
+    25%  {color: #41961f; }
+    50%  {color:#0399df; }
+    75%  {color: #eb5022; }
+    100% {color:#e100ff; }
+}
 /*GENERAL SETTINGS*/
 *{
     color: #eee;
@@ -118,6 +126,10 @@ button#menu-btn {
 .trending h2{
     font-size: 3rem;
     font-family: "caveat";
+    animation-name: word-color;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;  
 }
 
 .search-results, .trend-results{
@@ -531,6 +543,8 @@ font-size: .75rem;
 color: #222;
 }
 
+.trending h2{font-size: 2rem;}
+
 .search-results, .trend-results{
     display: grid;
     gap: .25rem;
@@ -639,16 +653,6 @@ input::placeholder{
 #about h1{ font-size: 1.5rem;}
 
 /*FOOTER*/
-.footer p{ font-size: .75rem;}
-   
-   
-
-
-    
-
-
- 
-
-
-
+.footer p{ font-size: .75rem;}  
 }
+
