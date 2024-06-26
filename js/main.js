@@ -97,7 +97,8 @@ async function sendRequest(){
     var _api_key = "api_key=b1zeTzlumEtPbUNcVYzQjeUi93hPyk1i";
     var _userInput = document.getElementById("search").value;
 
-    await fetch(`https://api.giphy.com/v1/gifs/search?${_api_key}&q=${_userInput}&limit=25&offset=0&rating=g&lang=en&bundle=clips_grid_picker`)
+    await fetch(`https://api.giphy.com/v1/gifs/search?${_api_key}&q=
+        ${_userInput}&limit=25&offset=0&rating=g&lang=en&bundle=clips_grid_picker`)
     .then(function(data){
         return data.json()
     })
@@ -118,11 +119,12 @@ async function sendRequest(){
    //clear result
    function clearResults (){
     document.getElementById("jsSrcResults").innerHTML = '';
+    document.getElementById("trending").innerHTML = ''
    } 
 };
 
 //trending results
-async function trend(){ await fetch ("https://api.giphy.com/v1/gifs/trending?api_key=b1zeTzlumEtPbUNcVYzQjeUi93hPyk1i&limit=45&offset=0&rating=g&bundle=messaging_non_clips").then(function(data){
+async function trend(){ await fetch (`https://api.giphy.com/v1/gifs/trending?api_key=b1zeTzlumEtPbUNcVYzQjeUi93hPyk1i&limit=45&offset=0&rating=g&bundle=messaging_non_clips`).then(function(data){
     return data.json()
 })
 .then(function(json){
